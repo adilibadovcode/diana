@@ -1,0 +1,44 @@
+﻿@using DianaApp.Areas.Admin.ViewModels
+@model List<AdminProductListItemVM>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container-fluid">
+    <a asp-action="Create" class="my-3 btn btn-outline-success">Create</a>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">SellPrice</th>
+                <th scope="col">CostPrice</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">ImageUrl</th>
+                <th scope="col">Category</th>
+                <th scope="col">Discount</th>
+                <th scope="col" colspan="2">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class='@(item.IsDeleted?"bg-danger":"")'>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.SellPrice</td>
+                    <td>@item.CostPrice</td>
+                    <td>@item.Quantity</td>
+                    <td><img src="@item.ImageUrl" width="60"/></td>
+                    <td>@item.Category?.Name</td>
+                    <td>@item.Discount</td>
+                    <td class="d-flex justify-content-around">
+                        <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-outline-info">Update</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

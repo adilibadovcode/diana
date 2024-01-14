@@ -1,0 +1,41 @@
+﻿@model List<SliderListItemVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <a asp-action="Create" class="my-3 btn btn-outline-success">Create</a>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Title</th>
+                <th scope="col">Text</th>
+                <th scope="col">Image</th>
+                <th scope="col">Position</th>
+                <th scope="col" colspan="2">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Title</td>
+                    <td>@item.Text</td>
+                    <td> <img width="60" src="@item.ImageUrl" /> </td>
+                    <td>@(item.IsLeft == true ? "left" : @item.IsLeft == false ? "right" : "middle")</td>
+                    <td class="d-flex justify-content-around">
+                        <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-outline-info">Update</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+<!-- /.container-fluid -->
