@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DianaApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f7d8966ef7061014015e2117d3569c5dacb132d")]
 [assembly: System.Reflection.AssemblyProductAttribute("DianaApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DianaApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

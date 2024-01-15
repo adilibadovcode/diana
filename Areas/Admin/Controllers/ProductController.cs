@@ -68,7 +68,7 @@ namespace DianaApp.Areas.Admin.Controllers
                 Name = vm.Name,
                 SellPrice = vm.SellPrice,
                 About = vm.About,
-                CategoryId = vm.CategoryId,
+                CategoryId = vm.CategoryId,8i
                 CostPrice = vm.CostPrice,
                 Description = vm.Description,
                 Discount = vm.Discount,
